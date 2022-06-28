@@ -28,7 +28,7 @@
 
         /*  Large Button    */
     --button-lg-font-size: clamp(1.2rem, 3vmin, 3rem);
-    --button-lg-bg-color-light: hsl(0 0% 0% / 0.3);
+    --button-lg-bg-color-light: hsl(0 0% 0% / 0.5);
     --button-hover-lg-bg-color: hsl(219 79% 66%);
 }
 
@@ -41,6 +41,7 @@ html{
     color: var(--text-color-dark);
     font-family: sans-serif;
     scroll-behavior: smooth;
+    scroll-padding-top: 16vh;
 }
 body{
     position: relative;
@@ -48,8 +49,10 @@ body{
     min-height: 100vh;
     background-color: var(--bg-color-light);
     
+    padding-top: 16vh;
     
 }
+
 p{
     line-height: 1.5rem;
 }
@@ -72,9 +75,6 @@ footer p{
     font-weight: 500;
     color: white;
     background-color: var(--button-lg-bg-color-light);
-    box-shadow: -5px 5px 5px hsl(0 0% 0% / .3),
-    inset 2px -2px 10px hsl(0 100% 100% / .3),
-    inset -2px 2px 10px hsl(0 0% 0% / .1);
     text-shadow: -1px 1px 2px hsl(0 0% 0%);
     border-radius: 5px;
 }
@@ -125,9 +125,6 @@ footer p{
     font-weight: 500;
     color: white;
     background-color: var(--button-lg-bg-color-light);
-    box-shadow: -5px 5px 5px hsl(0 0% 0% / .3),
-    inset 2px -2px 10px hsl(0 100% 100% / .3),
-    inset -2px 2px 10px hsl(0 0% 0% / .1);
     text-shadow: -1px 1px 2px hsl(0 0% 0%);
 }
 .button-large:hover{
@@ -142,7 +139,9 @@ footer p{
 /*  HEADER  */
 
 .home_header-primary{
-    position: relative;
+    position: fixed;
+    top:0; left: 0;
+    width: 100vw;
     color: var(--text-color-light);
     padding: var(--padding-primary);
     grid-template-columns: 1fr 1fr;
@@ -182,6 +181,7 @@ footer p{
     filter: invert(100%);
     -webkit-filter: invert(100%);
 }
+
 /*  HOME HEADER NAVIGATION  */
 
 .nav_primary{
@@ -213,14 +213,7 @@ footer p{
     padding: .25rem;
     color: var(--text-color-light);
 }
-.nav_primary-link:hover{
-    color: black;
-    background-color: var(--bg-color-light);
-}
-.nav_primary-link:active{
-    color: black;
-    background-color: var(--bg-color-light);
-}
+
 
 
 /*  NAVIGATION MENU BUTTON  */
@@ -272,20 +265,23 @@ footer p{
     transform:  translateX(30%) translateY(-367%) scale(0.6) rotate(60deg);
 }
 
+
 /*  Intro Section on home page  */
 
 .intro-section{
-    /* border: 5px solid green; */
-    min-height: 75vh;
+   
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
+
 .intro-section h1{
     text-transform: uppercase;
     font-size: 3rem;
+    
 }
 .intro-button{
     padding: 1rem;
@@ -326,6 +322,9 @@ footer p{
 .pricing-hero p:last-of-type{
     font-size: var(--text-size-smallest);
 }
+.pricing-button{
+    margin-bottom: 2rem;
+}
 
 
 /*  ABOUT SECTION   */
@@ -334,7 +333,8 @@ footer p{
     text-align: left;
 }
 .about-content article img{
-   
+    display: block;
+   margin: 0 auto;
 }
 
 
@@ -393,6 +393,10 @@ footer p{
 /*  MEDIA QUERIES FOR DEVICE/MOBILE SIZES   */
 
 @media only screen and (min-width: 970px) {
+
+    body{
+        padding-top: 0;
+    }
     /*  HEADER  */
 
     .home_header-primary{

@@ -23,7 +23,8 @@ NavLinks.forEach( link => {
 })
 
 const init = ()=>{
-    log('Connected')
-    log('A Random number confirming tools connection',random(10,1000,true))
+    const header = document.querySelector('.home_header-primary');
+    const hh = header.getBoundingClientRect().height;
+    log(hh/innerHeight)
 };
 init();
