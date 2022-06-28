@@ -10,42 +10,147 @@
     <script defer src="index.js"></script>
 </head>
 <body>
-    <header class="home_header-primary flexed">
-        <p class="website-title">Ana's Axe Throwing</p>
-        <nav class="nav_primary">
-            <div class="nav_primary-content_wrapper">
-                <h2 class="flex-centered">Menu</h2>
-                <ul>
-                    <li><a class="nav_primary-link" href="">Home</a></li>
-                    <li><a class="nav_primary-link" href="">Pricing</a></li>
-                    <li><a class="nav_primary-link" href="">Contact Us</a></li>
-                    <li><a class="nav_primary-link" href="">About</a></li>
-                    <!-- <li><a class="nav_primary-link" href="">The Experience?</a></li>
-                    <li><a class="nav_primary-link" href="">Events?</a></li>
-                    <li><a class="nav_primary-link" href="">Schedule?</a></li>
-                    <li><a class="nav_primary-link" href="">Merchandise?</a></li> -->
-                </ul>
+    <div class="page-wrapper">
+        <header class="home_header-primary grid">
+            <p class="website-title">Ana's Axe Throwing</p>
+            <div class="social_links-container">
+                <a class="social_link" href="http://www.facebook.com">
+                    <img src="img/icons/facebook-icon-32x32.png" width="16px" height="16px" alt="Facebook Icon">
+                </a>
+                <a class="social_link" href="http://www.twitter.com">
+                    <img src="img/icons/twitter-icon-32x32.png" width="16px" height="16px" alt="Twiiter Icon">
+                </a>
+                <a class="social_link" href="http://www.instagram.com">
+                    <img src="img/icons/instagram-icon-32x32.png" width="16px" height="16px" alt="Instagram Icon">
+                </a>
+                <a class="social_link" href="http://www.tiktok.com">
+                    <img id="TiktokIconImage" src="img/icons/tiktok-icon-32x32.png" width="16px" height="16px" alt="TikTok Icon">
+                </a>
             </div>
-        </nav>
-        <div data-menu-button class="menu_button">
-            <div class="menu_button-bar"></div>
-            <div class="menu_button-bar"></div>
-            <div class="menu_button-bar"></div>
-        </div>
-    </header>
-    <main>
+            <nav class="nav_primary">
+                <div class="nav_primary-content_wrapper">
+                    
+                    <ul>
+                        <li><a class="link nav_primary-link" href="#IntroSection">Home</a></li>
+                        <li><a class="link nav_primary-link" href="#PricingSection">Pricing</a></li>
+                        <li><a class="link nav_primary-link" href="#ScheduleSection">Schedule</a></li>
+                        <li><a class="link nav_primary-link" href="#ExperienceSection">Experience</a></li>
+                        <li><a class="link nav_primary-link" href="#EventsSection">Events</a></li>
+                        <li><a class="link nav_primary-link" href="#AboutSection">About</a></li>
+                        <li><a class="link nav_primary-link" href="#ContactSection">Contact Us</a></li>
+                        <li><a class="link nav_primary-link" href="">An Axe Throwing Guide</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div data-menu-button class="menu_button">
+                <div class="menu_button-bar"></div>
+                <div class="menu_button-bar"></div>
+                <div class="menu_button-bar"></div>
+            </div>
+        </header>
+        <main>
 
-    </main>
-    <footer>
-        <nav class="nav-secondary">
+            <section id="IntroSection" class="intro-section">
+                <h1>Ana's<br>Axe<br>Throwing</h1>
+                <p>Bury the hatchet in some thick wood</p>
+                <a href="#ScheduleSection" class="link link-large article-link">Schedule >>></a>
+            </section>
 
-        </nav>
-        <p>&copy; 2022 Ana's Axe Throwing</p>
-    </footer>
-    <!-- Website Example Toggle-->
-    <!-- <aside class="website_toggle-container">
-        <a href="" class="website-link">Website 2</a>
-        <a href="" class="website-link">Website 3</a>
-    </aside> -->
+            <section id="PricingSection" class="pricing-section">
+                <h2 class="section-title">Pricing</h2>
+                <section class="pricing-content flexed">
+                    <article class="pricing-hero">
+                        <h3><sup>&dollar;</sup>33<sup>99</sup></h3>
+                        <p>For the day</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur nostrum earum natus, voluptas magnam voluptatem.</p>
+                    </article>
+                    <article class="pricing-hero">
+                        <h3><sup>&dollar;</sup>4<sup>99</sup></h3>
+                        <p>per hour</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur nostrum earum natus, voluptas magnam voluptatem.</p>
+                    </article>
+                </section>
+                <button type="button" class="button button-large article-button">ViewMore >>></button>
+            </section>
+
+            <section id="ScheduleSection" class="schedule-section">
+                <h2 class="section-title">Schedule</h2>
+            </section>
+            <section id="ExperienceSection" class="experience-section">
+                <h2 class="section-title">Experience</h2>
+            </section>
+            <section id="EventsSection" class="event-section">
+                <h2 class="section-title">Events</h2>
+            </section>
+            <section id="AboutSection" class="about-section">
+                <h2 class="section-title">About</h2>
+                <section class="about-content">
+                    <article>
+                        <h3>Some title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sit nulla nobis eligendi quod sequi expedita amet, ex et fugiat nisi quibusdam ab dignissimos perferendis minus vel similique dolores. Quae?</p>
+                        <img src="img/axe-in-wood.jpg" width="300" style="aspect-ratio: 13/9;" alt="Picture of stuff">
+                    </article>
+                    <article>
+                        <h3>Another title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, vero placeat fugit dolorem quas dolores? Odio necessitatibus illo, reprehenderit quisquam eos, repellendus labore voluptatibus, nesciunt sequi mollitia cum qui numquam. Voluptates maiores inventore saepe doloribus deserunt, omnis eveniet voluptate. Iure animi error sunt, pariatur iste maiores voluptates cum ea tenetur!</p>
+                        <img src="img/wooden-axe-target.jpg" width="300" style="aspect-ratio: 13/9;" alt="Picture of stuff">
+                    </article>
+                    <article>
+                        <h3>Some other title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem vel, labore magni cum necessitatibus doloremque iure quaerat cumque amet eaque assumenda officiis dolores, nesciunt impedit. Id eius ipsa ullam atque maxime cupiditate aperiam, aut blanditiis, itaque ipsam possimus quod ut.</p>
+                        <img src="img/axe-in-wood.jpg" width="300" style="aspect-ratio: 13/9;" alt="Picture of stuff">
+                    </article>
+                </section>
+            </section>
+            <section id="ContactSection" class="contact-section">
+                <h2 class="section-title">Contact Us</h2>
+                <form action="" id="ContactForm" class="contact_form" method="">
+                    <!--    Used this tuturial https://www.youtube.com/watch?v=Yg6POD0M30w -->
+                    <!-- Use FormSubmit.com -->
+
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display: none;">
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Adding a succes page to override default from Formsubmit
+                        -create a success.html file
+                            -the value will the the full url of the html file, not the path to the file.
+
+                            -ex: value="https://altycon.github.io/AnasAxeThrowing/success.html"
+                    -->
+                    <input type="hidden" name="_next" value="">
+
+                    <section class="contact_form-inputs-wrapper">
+                        <div class="contact_form-input-container">
+                            <label for="contact_form_Name">Name</label>
+                            <input type="text" name="name" id="contact_form_Name" required autocomplete="off">
+                        </div>
+                        <div class="contact_form-input-container">
+                            <label for="contact_form_Email">Email</label>
+                            <input type="email" name="email" id="contact_form_Email">
+                        </div>
+                        <div class="contact_form-input-container">
+                            <label for="contact_form_Message">Message</label>
+                            <textarea name="message" id="contact_form_Message" cols="30" rows="10"></textarea>
+                        </div>
+                    </section>
+                    <button type="button" id="SubmiteButton" class="button submit-button">Send</button>
+                </form>
+            </section>
+
+        </main>
+        <footer>
+            <nav class="nav-secondary">
+    
+            </nav>
+            <p>&copy; 2022 Ana's Axe Throwing</p>
+        </footer>
+        <!-- Website Example Toggle-->
+        <!-- <aside class="website_toggle-container">
+            <a href="" class="website-link">Website 2</a>
+            <a href="" class="website-link">Website 3</a>
+        </aside> -->
+    </div>
+    
 </body>
 </html>
