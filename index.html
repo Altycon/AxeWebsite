@@ -11,45 +11,45 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <header class="home_header-primary grid">
+        <header class="page-header--primary  grid">
             <p class="website-title">Ana's Axe Throwing</p>
-            <div class="social_links-container">
-                <a class="social_link" href="http://www.facebook.com">
+            <div class="social-links--container">
+                <a class="social-link" href="http://www.facebook.com">
                     <img src="img/icons/facebook-icon-32x32.png" width="16px" height="16px" alt="Facebook Icon">
                 </a>
-                <a class="social_link" href="http://www.twitter.com">
+                <a class="social-link" href="http://www.twitter.com">
                     <img src="img/icons/twitter-icon-32x32.png" width="16px" height="16px" alt="Twiiter Icon">
                 </a>
-                <a class="social_link" href="http://www.instagram.com">
+                <a class="social-link" href="http://www.instagram.com">
                     <img src="img/icons/instagram-icon-32x32.png" width="16px" height="16px" alt="Instagram Icon">
                 </a>
-                <a class="social_link" href="http://www.tiktok.com">
+                <a class="social-link" href="http://www.tiktok.com">
                     <img id="TiktokIconImage" src="img/icons/tiktok-icon-32x32.png" width="16px" height="16px" alt="TikTok Icon">
                 </a>
             </div>
-            <nav class="nav_primary">
-                <div class="nav_primary-content_wrapper">
+            <nav class="navigation-primary js-navigation-primary">
+                <div class="navigation-primary__content-wrapper">
                     
                     <ul>
-                        <li><a class="link nav_primary-link" href="#IntroSection">Home</a></li>
-                        <li><a class="link nav_primary-link" href="#AboutSection">About</a></li>
-                        <li><a class="link nav_primary-link" href="#PricingSection">Pricing</a></li>
-                        <li><a class="link nav_primary-link" href="#ExperienceSection">Experience</a></li>
-                        <li><a class="link nav_primary-link" href="#ContactSection">Contact Us</a></li>
-                        <li><a class="link nav_primary-link" href="">Events</a></li>
-                        <li><a class="link nav_primary-link" href="">An Axe Throwing Guide</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="#IntroSection">Home</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="#AboutSection">About</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="#PricingSection">Pricing</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="#ExperienceSection">Experience</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="#ContactSection">Contact Us</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="">Events</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="">An Axe Throwing Guide</a></li>
                     </ul>
                 </div>
             </nav>
-            <div data-menu-button class="menu_button">
-                <div class="menu_button-bar"></div>
-                <div class="menu_button-bar"></div>
-                <div class="menu_button-bar"></div>
+            <div class="menu-button js-menu-button">
+                <div class="menu-button__bar"></div>
+                <div class="menu-button__bar"></div>
+                <div class="menu-button__bar"></div>
             </div>
         </header>
         <main>
 
-            <section id="IntroSection" class="intro-section">
+            <section id="IntroSection" class="intro-section flexed">
                 <h1>Ana's<br>Axe<br>Throwing</h1>
                 <p>Bury the hatchet in some thick wood</p>
                 <a href="#ScheduleSection" class="link link-large article-link">Schedule >>></a>
@@ -57,7 +57,7 @@
 
             <section id="AboutSection" class="about-section">
                 <h2 class="section-title">About</h2>
-                <section class="about-content">
+                <section class="about-section__content">
                     <article>
                         <h3>Some title</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sit nulla nobis eligendi quod sequi expedita amet, ex et fugiat nisi quibusdam ab dignissimos perferendis minus vel similique dolores. Quae?</p>
@@ -77,20 +77,20 @@
             </section>
 
             <section id="PricingSection" class="pricing-section">
-                <h2 class="section-title">Pricing</h2>
-                <section class="pricing-content flexed">
-                    <article class="pricing-hero">
+                <h2 class="pricing-section__title section-title">Pricing</h2>
+                <section class="pricing-section__content flexed">
+                    <article class="pricing-section__hero">
                         <h3><sup>&dollar;</sup>33<sup>99</sup></h3>
                         <p>For the day</p>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur nostrum earum natus, voluptas magnam voluptatem.</p>
                     </article>
-                    <article class="pricing-hero">
+                    <article class="pricing-section__hero">
                         <h3><sup>&dollar;</sup>4<sup>99</sup></h3>
                         <p>per hour</p>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur nostrum earum natus, voluptas magnam voluptatem.</p>
                     </article>
                 </section>
-                <button type="button" class="button button-large pricing-button">ViewMore >>></button>
+                <button type="button" class="button button-large pricing-section__button">ViewMore >>></button>
             </section>
 
             <section id="ExperienceSection" class="experience-section">
@@ -100,7 +100,7 @@
             
             <section id="ContactSection" class="contact-section">
                 <h2 class="section-title">Contact Us</h2>
-                <form action="" id="ContactForm" class="contact_form" method="">
+                <form action="" id="ContactForm" class="contact-form" method="">
                     <!--    Used this tuturial https://www.youtube.com/watch?v=Yg6POD0M30w -->
                     <!-- Use FormSubmit.com -->
 
@@ -116,21 +116,21 @@
                     -->
                     <input type="hidden" name="_next" value="">
 
-                    <section class="contact_form-inputs-wrapper">
-                        <div class="contact_form-input-container">
+                    <section class="contact-form__inputs-wrapper">
+                        <div class="contact-form__input-container">
                             <label for="contact_form_Name">Name</label>
                             <input type="text" name="name" id="contact_form_Name" required autocomplete="off">
                         </div>
-                        <div class="contact_form-input-container">
+                        <div class="contact-form__input-container">
                             <label for="contact_form_Email">Email</label>
                             <input type="email" name="email" id="contact_form_Email">
                         </div>
-                        <div class="contact_form-input-container">
+                        <div class="contact-form__input-container">
                             <label for="contact_form_Message">Message</label>
                             <textarea name="message" id="contact_form_Message" cols="30" rows="10"></textarea>
                         </div>
                     </section>
-                    <button type="button" id="SubmiteButton" class="button submit-button">Send</button>
+                    <button type="button" id="ContactFormSubmitButton" class="button contact-form__submit-button">Send</button>
                 </form>
             </section>
 

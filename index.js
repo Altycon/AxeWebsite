@@ -1,30 +1,56 @@
+const DETAILS = {
+    title: `Ana's Axe Throwing`,
+    author: 'Clayton McDaniel',
+    date: 'June-2022'
+}
+
 const log = console.log;
 
-const toggleMenu = (ev)=>{
-    document.querySelector('.nav_primary').classList.toggle('open');
-    
-    const Menu_Button_Bars = [...document.querySelectorAll('.menu_button-bar')];
-    Menu_Button_Bars.forEach( bar => {
-        bar.classList.toggle('open');
-    });
-};
+/**
+ *      GLOBAL DOM ELEMENT VARIABLES
+ */
+ const MenuButton = document.querySelector('.js-menu-button');
+
+
+
+// Opening and closing the navigation menu
+
 const closeMenu =(ev)=>{
-    document.querySelector('.nav_primary').classList.remove('open');
-    const Menu_Button_Bars = [...document.querySelectorAll('.menu_button-bar')];
+    document.querySelector('.js-navigation-primary').classList.remove('open');
+    const Menu_Button_Bars = [...document.querySelectorAll('.menu-button__bar')];
     Menu_Button_Bars.forEach( bar => {
         bar.classList.remove('open');
     });
 }
-const MenuButton = document.querySelector('[data-menu-button]');
-MenuButton.addEventListener('click', toggleMenu);
-const NavLinks = [...document.querySelectorAll('.nav_primary-link')];
-NavLinks.forEach( link => {
-    link.addEventListener('click', closeMenu)
-})
+
+const toggleMenu = (ev)=>{
+    const nav = document.querySelector('.js-navigation-primary');
+    // opening and closing
+    nav.classList.toggle('open');
+    // toggling animation on menu button bars
+    const Menu_Button_Bars = [...document.querySelectorAll('.menu-button__bar')];
+    Menu_Button_Bars.forEach( bar => {
+        bar.classList.toggle('open');
+    });
+
+    // closing menu when link is clicked
+    const NavLinks = [...document.querySelectorAll('.js-navigation-primary_link')];
+    NavLinks.forEach( link => {
+        if(nav.classList.contains('open')){
+            link.addEventListener('click', closeMenu);
+        }else{
+            link.removeEventListener('click', closeMenu);
+        }
+        
+    });
+    
+};
+
+
+
 
 const init = ()=>{
-    const header = document.querySelector('.home_header-primary');
-    const hh = header.getBoundingClientRect().height;
-    log(hh/innerHeight)
+    
+    MenuButton.addEventListener('click', toggleMenu);
 };
-init();
+window.addEventListener('load', init);
