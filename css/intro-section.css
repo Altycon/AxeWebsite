@@ -1,0 +1,17 @@
+
+
+.intro-title{
+    font-size: var(--text-size-h1);
+    text-transform: uppercase;
+    padding-top: 2rem;
+}
+.intro-sub-title{
+    font-weight: 500;
+}
+.intro-section .section-content__wrapper{
+    gap: 2rem;
+}
+.intro-section__img-container{
+    border: 1px solid black;
+    min-height: 33vh;
+}

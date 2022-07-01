@@ -1,0 +1,33 @@
+
+
+.about-section article{
+    text-align: left;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.about-section__article-title{
+    position: relative;
+    margin-left: 1rem;
+    margin-right: auto;
+}
+.about-section__article-title::before{
+    content: "";
+    position: absolute;
+    top: -50%; left: -33%;
+    width: 100%;
+    height: 150%;
+    background-color: hsl(0 0% 80% / .5);
+    z-index: -1;
+}
+.about-section__article-title::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 33%;
+    width: 100%;
+    height: 150%;
+    background-color: hsl(0 0% 50% / .5);
+    z-index: -1;
+}
