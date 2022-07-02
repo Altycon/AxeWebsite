@@ -32,7 +32,7 @@
         /*  Color   */
     --bg-color-light: hsl(0 0% 90%);
     --bg-color-dark: hsl(0 0% 11%);
-    --bg-color-accent: hsl(0 0% 0% / 0.5);
+    --bg-color-accent: hsl(0 0% 80%);
 
     /*  SPACING   */
     --padding1: 1rem;
@@ -97,8 +97,32 @@ footer p{
     text-transform: uppercase;
     color: var(--text-color-light);
     border-radius: 50px;
+    box-shadow: 2px 2px 5px hsl(0 0% 0% / .5),
+    inset 2px 2px 5px hsl(0 100% 100% / .5),
+    inset -2px -2px 2px hsl(0 0% 0%);
 }
 .link--large:hover{
+    background-color: var(--link-hover-lg-bgc);
+    color: var(--text-color-dark);
+}
+.button{
+    font-size: var(--text-size-p);
+    cursor: pointer;
+    border: none;
+}
+.button--large{
+    max-width: 66vw;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: var(--link-lg-fs);
+    background-color: var(--link-lg-bgc);
+    text-transform: uppercase;
+    color: var(--text-color-light);
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px hsl(0 0% 0% / .5),
+    inset 2px 2px 5px hsl(0 100% 100% / .5);
+}
+.button--large:hover{
     background-color: var(--link-hover-lg-bgc);
     color: var(--text-color-dark);
 }

@@ -1,0 +1,11 @@
+
+.section-content__wrapper{
+    margin-bottom: 2rem;
+}
+.experience-section__content{
+    grid-template-columns: auto;
+    gap: 1rem;
+}
+.experience-section__content h3{
+    padding: 1rem;
+}
