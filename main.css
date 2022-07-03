@@ -30,7 +30,7 @@
 
     /*  BACKGROUNDS  */
         /*  Color   */
-    --bg-color-light: hsl(0 0% 90%);
+    --bg-color-light: hsl(0 0% 95%);
     --bg-color-dark: hsl(0 0% 11%);
     --bg-color-accent: hsl(0 0% 80%);
 
@@ -69,8 +69,8 @@ body{
     position: relative;
     text-align: center;
     min-height: 100vh;
-    /* background-color: var(--bg-color-light); */
-    padding-top: 16vh;  
+    background-color: var(--bg-color-light);
+    padding-top: 16vh;
 }
 
 main > section{
@@ -200,7 +200,7 @@ footer p{
     gap: 1rem 0;
     /* height: 5rem; */
     background-color: var(--bg-color-dark);
-    
+    z-index: 1;
 }
 .website-title{
     grid-column: 1;
@@ -210,7 +210,10 @@ footer p{
     font-weight: 900;
     color: var(--text-color-light);
 }
-
+.website-title > a{
+    color: var(--bg-color-light);
+    text-decoration: none;
+}
 .social-links--container{
     grid-column: 1/3;
     grid-row: 2;

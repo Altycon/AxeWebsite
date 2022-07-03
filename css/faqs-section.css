@@ -1,0 +1,14 @@
+
+
+.faqs-section .section-content__wrapper{
+    padding-top: 2rem;
+}
+.faqs-section__content{
+    gap: 2rem;
+}
+/* .faqs-section__question{
+    border: 1px solid hsl(180 100% 50%);
+}
+.faqs-section__answer{
+    border: 1px solid hsl(240 100% 50%);
+} */

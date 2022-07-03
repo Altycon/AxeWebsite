@@ -1,0 +1,83 @@
+
+.contact-section__content{
+    max-width: 500px;
+}
+.contact-section__content > p{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: var(--text-size-h3);
+}
+.contact-form{
+    background-color: var(--bg-color-accent);
+    padding: 1rem;
+}
+.contact-form__inputs-wrapper{
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.contact-form__input-container > label{
+    margin-left: .5rem;
+    display: block;
+    text-align: left;
+    font-size: var(--text-size-smallest);
+    transform: translateY(0px);
+}
+
+.contact-form__input-container > input{
+    width: 100%;
+    padding: .5rem;
+    font-size: var(--text-size-p);
+    border: none;
+    background-color: var(--bg-color-accent);
+    border-bottom: 1px solid black;
+}
+.contact-form__input-container > input:focus{
+    border: none;
+    outline: none;
+    background-color: hsl(0 0% 90%);
+}
+.contact-form__input-container > input:valid{
+    border: none;
+    outline: none;
+}
+.contact-form__input-container > input:user-invalid{
+    outline: 1px solid red;
+    border: none;
+}
+.contact-form__input-container textarea{
+    border: none;
+    padding: .5rem;
+    background-color: var(--bg-color-accent);
+    background-image: url("../img/Mail_Dark_Icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    resize: none;
+    transition: all 250ms ease-out;
+}
+.contact-form__input-container textarea:focus{
+    background-image: none;
+    background-color: hsl(0 0% 90%);
+    border: none;
+    outline: none;
+}
+.contact-form__submit-button{
+    font-size: var(--button-lg-fs);
+    background-color: var(--bg-color-accent);
+    padding: 1rem;
+    width: 100%;
+    color: var(--bg-color-dark);
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px hsl(0 0% 0% / 0.5),
+    inset 2px 2px 5px hsl(0 100% 100% / 0.5),
+    -2px -2px 5px hsl(0 100% 100% / 0.5),
+    inset -2px -2px 2px hsl(0 0% 0% / 0.5);
+    cursor:default;
+}
+.contact-form__submit-button:active{
+    box-shadow: 2px 2px 2px hsl(0 100% 100% / 0.5),
+    inset 2px 2px 5px hsl(0 0% 0% / 0.5),
+    -2px -2px 2px hsl(0 0% 0% / 0.5),
+    inset -2px -2px 2px hsl(0 100% 100% / 0.5);
+}

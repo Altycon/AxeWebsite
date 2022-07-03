@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/about-section.css">
     <link rel="stylesheet" href="css/pricing-section.css">
     <link rel="stylesheet" href="css/experience-section.css">
+    <link rel="stylesheet" href="css/contact-section.css">
+    <link rel="stylesheet" href="css/waiver-section.css">
+    <link rel="stylesheet" href="css/faqs-section.css">
 
     <!--    JAVASCRIPT    -->
     <script defer src="tools.js"></script>
@@ -20,7 +23,7 @@
 <body>
     <div class="page-wrapper">
         <header class="page-header--primary  grid">
-            <p class="website-title">Ana's Axe Throwing</p>
+            <p class="website-title"><a href="">Ana's Axe Throwing</a></p>
             <div class="social-links--container">
                 <a class="social-link" href="http://www.facebook.com">
                     <img src="img/icons/facebook-icon-32x32.png" width="16px" height="16px" alt="Facebook Icon">
@@ -46,7 +49,7 @@
                         <li><a class="link navigation-primary__link js-navigation-primary_link" href="#ContactSection">Contact Us</a></li>
                         <li><a class="link navigation-primary__link js-navigation-primary_link" href="">An Axe Throwing Guide</a></li>
                         <li><a class="link navigation-primary__link js-navigation-primary_link" href="#WaiverSection">The Waiver</a></li>
-                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="">FAQS</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="#FaqsSection">FAQS</a></li>
                     </ul>
                 </div>
             </nav>
@@ -134,7 +137,7 @@
                         <article>
                             <h3>Come to play and have fun!</h3>
                             <p>Bring a group of friends and let's get this party started!</p>
-                            <p>*NO PARTYING ALLOWED* see details above</p>
+                            <p>*NO PARTYING ALLOWED*<br>see details above</p>
                         </article>
                         <article>
                             <h3>Ride our dragons or ostrich!</h3>
@@ -152,40 +155,42 @@
             <section id="ContactSection" class="contact-section">
                 <h2 class="page-section__title">Contact Us</h2>
                 <div class="section-content__wrapper">
-                    <p>Have a question or inquiries into a particular situation? </p>
-                    <p>Send us some words!</p>
-                    <form action="" id="ContactForm" class="contact-form" method="">
-                        <!--    Used this tuturial https://www.youtube.com/watch?v=Yg6POD0M30w -->
-                        <!-- Use FormSubmit.com -->
+                    <section class="contact-section__content">
+                        <p>Have a question or inquiries into a particular situation? </p>
+                        <p>Send us some words!</p>
+                        <form action="" id="ContactForm" class="contact-form" method="">
+                            <!--    Used this tuturial https://www.youtube.com/watch?v=Yg6POD0M30w -->
+                            <!-- Use FormSubmit.com -->
 
-                        <!-- Honeypot -->
-                        <input type="text" name="_honey" style="display: none;">
-                        <!-- Disable Captcha -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- Adding a succes page to override default from Formsubmit
-                            -create a success.html file
-                                -the value will the the full url of the html file, not the path to the file.
+                            <!-- Honeypot -->
+                            <input type="text" name="_honey" style="display: none;">
+                            <!-- Disable Captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Adding a succes page to override default from Formsubmit
+                                -create a success.html file
+                                    -the value will the the full url of the html file, not the path to the file.
 
-                                -ex: value="https://altycon.github.io/AnasAxeThrowing/success.html"
-                        -->
-                        <input type="hidden" name="_next" value="">
+                                    -ex: value="https://altycon.github.io/AnasAxeThrowing/success.html"
+                            -->
+                            <input type="hidden" name="_next" value="">
 
-                        <section class="contact-form__inputs-wrapper">
-                            <div class="contact-form__input-container">
-                                <label for="ContactForm_Name">Name</label>
-                                <input type="text" name="name" id="ContactForm_Name" autocomplete="off" required>
-                            </div>
-                            <div class="contact-form__input-container">
-                                <label for="ContactFrom_Email">Email</label>
-                                <input type="email" name="email" id="ContactFrom_Email" autocomplete="off" required>
-                            </div>
-                            <div class="contact-form__input-container">
-                                <label for="ContactFrom_Message">Message</label>
-                                <textarea name="message" id="ContactFrom_Message" cols="30" rows="10" required></textarea>
-                            </div>
-                        </section>
-                        <button type="button" id="ContactFormSubmitButton" class="button contact-form__submit-button">Send</button>
-                    </form>
+                            <section class="contact-form__inputs-wrapper flexed-column">
+                                <div class="contact-form__input-container">
+                                    <label for="ContactForm_Name">Name</label>
+                                    <input type="text" name="name" id="ContactForm_Name" autocomplete="off" required>
+                                </div>
+                                <div class="contact-form__input-container">
+                                    <label for="ContactFrom_Email">Email</label>
+                                    <input type="email" name="email" id="ContactFrom_Email" autocomplete="off" required>
+                                </div>
+                                <div class="contact-form__input-container flexed-column">
+                                    <label for="ContactFrom_Message">Message</label>
+                                    <textarea name="message" id="ContactFrom_Message" cols="30" rows="10" autocomplete="off" required></textarea>
+                                </div>
+                            </section>
+                            <button type="button" id="ContactFormSubmitButton" class="button contact-form__submit-button">Send</button>
+                        </form>
+                    </section>
                 </div>
             </section>
 
@@ -212,10 +217,10 @@
                         -->
                         <input type="hidden" name="_next" value="">
 
-                        <section class="contact-form__inputs-wrapper">
-                            <div class="waiver-form__input-container">
+                        <section class="waiver-form__inputs-wrapper">
+                            <div class="waiver-form__canvas-container">
                                 <label for="WaiverFrom_SignatureCanvas">Sign</label>
-                                <canvas id="WaiverFrom_SignatureCanvas" style="border: 1px solid black;"></canvas>
+                                <canvas id="WaiverFrom_SignatureCanvas"></canvas>
                             </div>
                             <div class="waiver-form__input-container">
                                 <label for="WaiverFrom_DigitalSignature">Digitally Sign</label>
@@ -224,6 +229,38 @@
                         </section>
                         <button type="button" id="WaiverFormSubmitButton" class="button waiver-form__submit-button">Sign Waiver</button>
                     </form>
+                </div>
+            </section>
+
+            <section id="FaqsSection" class="faqs-section">
+                <h2 class="page-section__title">FAQS</h2>
+                <div class="section-content__wrapper">
+                    <section class="faqs-section__content flexed-column">
+                        <article>
+                            <h3 class="faqs-section__question">Q:&nbsp;Something you'd like to know?</h3>
+                            <p class="faqs-section__answer">A:&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. At, numquam!</p>
+                        </article>
+                        <article>
+                            <h3 class="faqs-section__question">Q:&nbsp;Another question?</h3>
+                            <p class="faqs-section__answer">A: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos nam porro culpa ut eveniet!</p>
+                        </article>
+                        <article>
+                            <h3 class="faqs-section__question">Q:&nbsp;This is anohter faq?</h3>
+                            <p class="faqs-section__answer">A:&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, optio.</p>
+                        </article>
+                        <article>
+                            <h3 class="faqs-section__question">Q:&nbsp;Something you'd like to know?</h3>
+                            <p class="faqs-section__answer">A:&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. At, numquam!</p>
+                        </article>
+                        <article>
+                            <h3 class="faqs-section__question">Q:&nbsp;Another question?</h3>
+                            <p class="faqs-section__answer">A: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos nam porro culpa ut eveniet!</p>
+                        </article>
+                        <article>
+                            <h3 class="faqs-section__question">Q:&nbsp;This is anohter faq?</h3>
+                            <p class="faqs-section__answer">A:&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, optio.</p>
+                        </article>
+                    </section>
                 </div>
             </section>
 
