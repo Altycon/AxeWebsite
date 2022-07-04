@@ -1,5 +1,6 @@
 .intro-section{
     color: var(--text-color-dark);
+    padding-top: 16vh;
 }
 .intro-title{
     font-size: var(--text-size-h1);

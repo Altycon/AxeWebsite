@@ -9,9 +9,34 @@ const log = console.log;
 /**
  *      GLOBAL DOM ELEMENT VARIABLES
  */
+const pageWrapper = document.querySelector('.page-wrapper');
+const primaryHeader = document.querySelector('.page-header--primary');
  const MenuButton = document.querySelector('.js-menu-button');
  const darkModeButton = document.querySelector('.light-mode__container');
 
+// Moving Primary Header when scrolling
+// https://codepen.io/millertchris/pen/xxdZRmW
+
+let lastScroll = 0;
+const HideAndRevielPrimaryHeader = ()=>{
+    const currentScroll = pageWrapper.scrollTop;
+	if (currentScroll <= 0) {
+		primaryHeader.classList.remove("scroll-up");
+		return;
+	}
+
+	if (currentScroll > lastScroll && !primaryHeader.classList.contains("scroll-down")) {
+		primaryHeader.classList.remove("scroll-up");
+		primaryHeader.classList.add("scroll-down");
+	} else if (
+		currentScroll < lastScroll &&
+		primaryHeader.classList.contains("scroll-down")
+	) {
+		primaryHeader.classList.remove("scroll-down");
+		primaryHeader.classList.add("scroll-up");
+	}
+	lastScroll = currentScroll;
+}
 
 // Opening and closing the navigation menu
 
@@ -46,6 +71,7 @@ const toggleMenu = (ev)=>{
     
 };
 
+
 const toggleDarkMode = (ev)=>{
     const root = getComputedStyle(document.documentElement);
     const lightColor = root.getPropertyValue('--color-primary-light');
@@ -72,6 +98,7 @@ const toggleDarkMode = (ev)=>{
 
 const init = ()=>{
     
+    document.querySelector('.page-wrapper').addEventListener("scroll", HideAndRevielPrimaryHeader);
     MenuButton.addEventListener('click', toggleMenu);
     darkModeButton.addEventListener('click', toggleDarkMode);
 };
