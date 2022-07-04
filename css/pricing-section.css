@@ -11,8 +11,8 @@
 .pricing-section__hero{
     max-width: 400px;
     gap: 1rem;
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-light);
+    background-color: var(--bg-color-accent-light);
+    color: var(--text-color-dark);
     padding: 1rem;
     border-radius: 5px;
 }

@@ -50,10 +50,17 @@ const toggleDarkMode = (ev)=>{
     const root = getComputedStyle(document.documentElement);
     const lightColor = root.getPropertyValue('--color-primary-light');
     const darkColor = root.getPropertyValue('--color-primary-dark');
+    const lightAccentColor = root.getPropertyValue('--color-primary-accent-light');
+    const darkAccentColor = root.getPropertyValue('--color-primary-accent-dark');
+    const ContactFormTextAreaImageLight = root.getPropertyValue('--contact-form-textarea-image-light');
+    const ContactFormTextAreaImageDark = root.getPropertyValue('--contact-form-textarea-image-dark');
     document.documentElement.style.setProperty('--color-primary-dark', lightColor);
     document.documentElement.style.setProperty('--color-primary-light', darkColor);
+    document.documentElement.style.setProperty('--color-primary-accent-dark', lightAccentColor);
+    document.documentElement.style.setProperty('--color-primary-accent-light', darkAccentColor);
+    document.documentElement.style.setProperty('--contact-form-textarea-image-light', ContactFormTextAreaImageDark);
+    document.documentElement.style.setProperty('--contact-form-textarea-image-dark', ContactFormTextAreaImageLight);
     
-
 
      
     document.querySelector('.sun-decoration1').classList.toggle('change');

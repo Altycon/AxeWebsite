@@ -4,6 +4,7 @@
     padding-top: 2rem;
 }
 .faqs-section__content{
+    color: var(--text-color-dark);
     gap: 2rem;
 }
 /* .faqs-section__question{

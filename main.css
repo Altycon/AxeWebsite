@@ -16,7 +16,10 @@
 
     --color-primary-light: hsl(0 0% 90%);
     --color-primary-dark: hsl(0 0% 11%);
+    --color-primary-accent-light: hsl(0 0% 80%);
+    --color-primary-accent-dark: hsl(0 0% 20%);
     /*  TEXT/FONT  */
+    --font-primary: sans-serif;
         /*  Color   */
     --text-color-dark: var(--color-primary-dark);
     --text-color-light: var(--color-primary-light);
@@ -35,7 +38,8 @@
         /*  Color   */
     --bg-color-light: var(--color-primary-light);
     --bg-color-dark: var(--color-primary-dark);
-    --bg-color-accent: hsl(0 0% 80%);
+    --bg-color-accent-light: var(--color-primary-accent-light);
+    --bg-color-accent-dark: var(--color-primary-accent-dark);
 
     --primary-header-color-dark: hsl(0 0% 11%);
     --primary-header-color-light: hsl(0 0% 90%);
@@ -54,6 +58,10 @@
     --button-lg-fs: clamp(1.2rem, 3vmin, 3rem);
     --button-lg-bgc: var(--color-primary-dark);
     --button-hover-lg-bgc: hsl(219 79% 66%);
+
+        /* Contact Form TextArea Image */
+    --contact-form-textarea-image-light: url("../img/icons/mail-icon-white-256x256.png");
+    --contact-form-textarea-image-dark: url("../img/icons/mail-icon-black256x256.png");
 }
 
 /*  Style Reset */
@@ -67,8 +75,7 @@ p{font-size: var(--text-size-p); line-height: 1.5rem;}
 /*  SITEWIDE  STYLES  */
 
 html{
-    color: var(--text-color-dark);
-    font-family: sans-serif;
+    font-family: var(--font-primary);
     /* scroll-behavior: smooth; */
     scroll-padding-top: 16vh;
 }
@@ -85,6 +92,7 @@ main > section{
 }
 
 footer p{
+    color: var(--text-color-dark);
     padding: var(--padding1);
 }
 
@@ -184,9 +192,10 @@ footer p{
 .page-section__title{
     margin: 0 auto 0 34vw;
     width: 66vw;
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-light);
+    background-color: var(--bg-color-accent-light);
+    color: var(--color-primary-accent-dark);
     padding: 1rem;
+    border-top-left-radius: 50px;
 }
 
 
@@ -227,8 +236,8 @@ footer p{
     grid-column: 2;
     grid-row: 1;
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50px;
     cursor: pointer;
     margin: 0 auto;
@@ -238,23 +247,25 @@ footer p{
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-light);
+    background-color: hsl(59.34 71.26% 64.12%);
     z-index: -1;
     transform: rotate(0deg);
+    filter: blur(1px);
     transition: all 250ms ease-in-out;
 }
 .sun-decoration1.change{
     transform: rotate(45deg) scale(1.3);
     border-radius: 50%;
     background-color: cornflowerblue;
-    filter: blur(2px);
+    filter: blur(5px);
 }
 .sun-decoration2{
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-light);
+    background-color: hsl(59.34 71.26% 64.12%);
+    filter: blur(1px);
     z-index: -1;
     transform: rotate(45deg);
     transition: all 250ms ease-in-out;
@@ -266,26 +277,31 @@ footer p{
 .sun{
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(var(--bg-color-dark), var(--bg-color-light));
-    background-color: var(--bg-color-light);
+    background-image: radial-gradient(var(--bg-color-light), hsla(37.22 96.08% 51.96%));
+    background-color: var(--bg-color-dark);
     border-radius: 50px;
     overflow: hidden;
     transition: all 250ms ease-in-out;
 }
 .sun.change{
     background-image: none;
-    background-color: var(--bg-color-light);
+    /* background-color: var(--bg-color-light); */
 }
 .earth-shadow{
+    position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-dark);
+    background-color: var(--primary-header-color-dark);
     border-radius: 50%;
     transform: translateX(-100%);
-    transition: all 250ms ease-in-out;
+    filter: blur(1px);
+    opacity: 0;
+    transition: all 400ms ease-in-out;
 }
 .earth-shadow.change{
     transform: translate(-33%);
+    opacity: 1;
 }
 
 
@@ -403,6 +419,10 @@ footer p{
 /*  ANIMATIONS  */
 
 /*  MEDIA QUERIES FOR DEVICE/MOBILE SIZES   */
+
+
+
+/*  SITE    */
 
 @media only screen and (min-width: 970px) {
     html{

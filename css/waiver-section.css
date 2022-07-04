@@ -1,4 +1,7 @@
-
+.waiver-section{
+    color: var(--text-color-dark);
+    background-color: var(--bg-color-accent-light);
+}
 .waiver > h3{
     margin-bottom: 1rem;
 }

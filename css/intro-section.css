@@ -1,4 +1,6 @@
-
+.intro-section{
+    color: var(--text-color-dark);
+}
 .intro-title{
     font-size: var(--text-size-h1);
     text-transform: uppercase;
@@ -16,18 +18,19 @@
     border-radius: 50%;
 }
 .intro-section__img-container::before{
-    content: "Something here?";
-    color: var(--text-color-light);
+    content: "{\2205:\2205} ";
+    color: var(--text-color-dark);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 900;
     text-transform: uppercase;
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-dark);
+    background-color: var(--bg-color-accent-light);
     border-radius: 50%;
 }
 .intro-section__img-container::after{
@@ -36,7 +39,7 @@
     top: 50%; left: 50%;
     width: calc(100% + 2rem);
     height: 33%;
-    background-color: var(--bg-color-dark);
+    background-color: var(--bg-color-accent-light);
     transform: translate(-50%, -50%);
     z-index: -1;
 }

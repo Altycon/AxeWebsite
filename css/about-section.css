@@ -9,6 +9,7 @@
 
 
 .about-section__article-title{
+    color: var(--text-color-dark);
     position: relative;
     margin-left: 1rem;
     margin-right: auto;
@@ -30,4 +31,7 @@
     height: 150%;
     background-color: hsl(0 0% 50% / .5);
     z-index: -1;
+}
+.about-section article > p{
+    color: var(--text-color-dark);
 }

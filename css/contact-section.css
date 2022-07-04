@@ -1,5 +1,6 @@
 
 .contact-section__content{
+    color: var(--text-color-dark);
     max-width: 500px;
 }
 .contact-section__content > p{
@@ -9,7 +10,8 @@
     font-size: var(--text-size-h3);
 }
 .contact-form{
-    background-color: var(--bg-color-accent);
+    background-color: var(--bg-color-accent-light);
+
     padding: 1rem;
 }
 .contact-form__inputs-wrapper{
@@ -17,6 +19,7 @@
     margin-bottom: 1rem;
 }
 .contact-form__input-container > label{
+    /* color: var(--color-primary-dark); */
     margin-left: .5rem;
     display: block;
     text-align: left;
@@ -24,18 +27,19 @@
     transform: translateY(0px);
 }
 
-.contact-form__input-container > input{
+.contact-form__input-container input{
+    color: var(--text-color-dark);
     width: 100%;
     padding: .5rem;
     font-size: var(--text-size-p);
     border: none;
-    background-color: var(--bg-color-accent);
+    background-color: var(--bg-color-accent-light);
     border-bottom: 1px solid black;
 }
 .contact-form__input-container > input:focus{
     border: none;
     outline: none;
-    background-color: hsl(0 0% 90%);
+    background-color: var(--bg-color-light);
 }
 .contact-form__input-container > input:valid{
     border: none;
@@ -46,10 +50,12 @@
     border: none;
 }
 .contact-form__input-container textarea{
+    font-family: var(--font-primary);
+    color: var(--text-color-dark);
     border: none;
     padding: .5rem;
-    background-color: var(--bg-color-accent);
-    background-image: url("../img/Mail_Dark_Icon.png");
+    background-color: var(--bg-color-accent-light);
+    background-image: var(--contact-form-textarea-image-light);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -58,26 +64,26 @@
 }
 .contact-form__input-container textarea:focus{
     background-image: none;
-    background-color: hsl(0 0% 90%);
+    background-color: var(--bg-color-accent-light);
     border: none;
     outline: none;
 }
 .contact-form__submit-button{
     font-size: var(--button-lg-fs);
-    background-color: var(--bg-color-accent);
+    background-color: var(--bg-color-accent-light);
     padding: 1rem;
     width: 100%;
     color: var(--bg-color-dark);
     border-radius: 50px;
-    box-shadow: 2px 2px 5px hsl(0 0% 0% / 0.5),
-    inset 2px 2px 5px hsl(0 100% 100% / 0.5),
-    -2px -2px 5px hsl(0 100% 100% / 0.5),
+    box-shadow: 2px 2px 4px hsl(0 0% 0% / 0.5),
+    inset 2px 2px 4px hsl(0 100% 100% / 0.5),
+    -2px -2px 2px hsl(0 100% 100% / 0.5),
     inset -2px -2px 2px hsl(0 0% 0% / 0.5);
     cursor:default;
 }
 .contact-form__submit-button:active{
     box-shadow: 2px 2px 2px hsl(0 100% 100% / 0.5),
-    inset 2px 2px 5px hsl(0 0% 0% / 0.5),
+    inset 2px 2px 4px hsl(0 0% 0% / 0.5),
     -2px -2px 2px hsl(0 0% 0% / 0.5),
     inset -2px -2px 2px hsl(0 100% 100% / 0.5);
 }
