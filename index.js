@@ -10,7 +10,7 @@ const log = console.log;
  *      GLOBAL DOM ELEMENT VARIABLES
  */
  const MenuButton = document.querySelector('.js-menu-button');
-
+ const darkModeButton = document.querySelector('.light-mode__container');
 
 
 // Opening and closing the navigation menu
@@ -46,11 +46,26 @@ const toggleMenu = (ev)=>{
     
 };
 
+const toggleDarkMode = (ev)=>{
+    const root = getComputedStyle(document.documentElement);
+    const lightColor = root.getPropertyValue('--color-primary-light');
+    const darkColor = root.getPropertyValue('--color-primary-dark');
+    document.documentElement.style.setProperty('--color-primary-dark', lightColor);
+    document.documentElement.style.setProperty('--color-primary-light', darkColor);
+    
 
+
+     
+    document.querySelector('.sun-decoration1').classList.toggle('change');
+    document.querySelector('.sun-decoration2').classList.toggle('change');
+    document.querySelector('.sun').classList.toggle('change');
+    document.querySelector('.earth-shadow').classList.toggle('change');
+}
 
 
 const init = ()=>{
     
     MenuButton.addEventListener('click', toggleMenu);
+    darkModeButton.addEventListener('click', toggleDarkMode);
 };
 window.addEventListener('load', init);
