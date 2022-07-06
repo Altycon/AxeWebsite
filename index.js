@@ -40,6 +40,8 @@ const HideAndRevielPrimaryHeader = ()=>{
 
 // Opening and closing the navigation menu
 
+
+
 const closeMenu =(ev)=>{
     document.querySelector('.js-navigation-primary').classList.remove('open');
     const Menu_Button_Bars = [...document.querySelectorAll('.menu-button__bar')];
@@ -47,8 +49,16 @@ const closeMenu =(ev)=>{
         bar.classList.remove('open');
     });
 }
+const isClickOutside = (ev)=>{
+    if(!document.querySelector('.js-navigation-primary').contains(ev.target) && 
+    !document.querySelector('.js-menu-button').contains(ev.target)){
+        closeMenu();
+    }
+}
 
 const toggleMenu = (ev)=>{
+    if(!ev || ev == null || ev == undefined)return;
+    window.addEventListener('click', isClickOutside);
     const nav = document.querySelector('.js-navigation-primary');
     // opening and closing
     nav.classList.toggle('open');
@@ -80,12 +90,14 @@ const toggleDarkMode = (ev)=>{
     const darkAccentColor = root.getPropertyValue('--color-primary-accent-dark');
     const ContactFormTextAreaImageLight = root.getPropertyValue('--contact-form-textarea-image-light');
     const ContactFormTextAreaImageDark = root.getPropertyValue('--contact-form-textarea-image-dark');
+    const SocialLinkBrightnessMobile = root.getPropertyValue("--social-link-brightness-mobile");
     document.documentElement.style.setProperty('--color-primary-dark', lightColor);
     document.documentElement.style.setProperty('--color-primary-light', darkColor);
     document.documentElement.style.setProperty('--color-primary-accent-dark', lightAccentColor);
     document.documentElement.style.setProperty('--color-primary-accent-light', darkAccentColor);
     document.documentElement.style.setProperty('--contact-form-textarea-image-light', ContactFormTextAreaImageDark);
     document.documentElement.style.setProperty('--contact-form-textarea-image-dark', ContactFormTextAreaImageLight);
+    document.documentElement.style.setProperty('--social-link-brightness-desktop', SocialLinkBrightnessMobile);
     
 
      

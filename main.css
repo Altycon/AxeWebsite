@@ -53,7 +53,8 @@
     --link-lg-fs: clamp(1.2rem, 3vmin, 3rem);
     --link-lg-bgc: var(--color-primary-dark);
     --link-hover-lg-bgc: hsl(219 79% 66%);
-    --social-link-brightness: 90;
+    --social-link-brightness-mobile: 90;
+    --social-link-brightness-desktop: 0;
         /*  Buttons    */
     --button-lg-fs: clamp(1.2rem, 3vmin, 3rem);
     --button-lg-bgc: var(--color-primary-dark);
@@ -328,12 +329,12 @@ footer p{
     display: inline-block;
 }
 .social-link img{
-    filter: brightness(calc(var(--social-link-brightness) * 1%));
-    -webkit-filter: brightness(calc(var(--social-link-brightness) * 1%));
+    filter: brightness(calc(var(--social-link-brightness-mobile) * 1%));
+    -webkit-filter: brightness(calc(var(--social-link-brightness-mobile) * 1%));
 }
 #TiktokIconImage{
-    filter: invert(calc(var(--social-link-brightness) * 1%));
-    -webkit-filter: invert(calc(var(--social-link-brightness) * 1%));
+    filter: invert(calc(var(--social-link-brightness-mobile) * 1%));
+    -webkit-filter: invert(calc(var(--social-link-brightness-mobile) * 1%));
 }
 
 /*  HOME HEADER NAVIGATION  */
@@ -472,16 +473,18 @@ footer p{
         justify-content: center;
         gap: 1rem;
     }
-    .social-link img {
-        filter: brightness(0%);
-        -webkit-filter: brightness(0%);
+   
+    
+    .social-link img{
+        filter: brightness(calc(var(--social-link-brightness-desktop) * 1%));
+        -webkit-filter: brightness(calc(var(--social-link-brightness-desktop) * 1%));
     }
     .social-link:hover img{
         transform: scale(1.2);
     }
     #TiktokIconImage{
-        filter: brightness(0%);
-        -webkit-filter: brightness(0%);
+        filter: invert(calc(var(--social-link-brightness-desktop) * 1%));
+        -webkit-filter: invert(calc(var(--social-link-brightness-desktop) * 1%));
     }
         /*  HOME HEADER NAVIGATION  */
 
