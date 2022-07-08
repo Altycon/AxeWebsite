@@ -10,13 +10,6 @@
 
     <!--    CSS    -->
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="css/intro-section.css">
-    <link rel="stylesheet" href="css/about-section.css">
-    <link rel="stylesheet" href="css/pricing-section.css">
-    <link rel="stylesheet" href="css/experience-section.css">
-    <link rel="stylesheet" href="css/contact-section.css">
-    <link rel="stylesheet" href="css/waiver-section.css">
-    <link rel="stylesheet" href="css/faqs-section.css">
 
     <!--    JAVASCRIPT    -->
     <script defer src="tools.js"></script>
@@ -25,7 +18,7 @@
 <body>
     <div class="page-wrapper">
         <header class="page-header--primary  grid">
-            <p class="website-title"><a href="#IntroSection">Ana's Axe Throwing</a></p>
+            <p class="website-title"><a href="index.html">Ana's Axe Throwing</a></p>
 
             <!--    LIGHT/DARK MODE TOGGLE  -->
             <div class="light-mode__container">
@@ -58,7 +51,7 @@
                         <li><a class="link navigation-primary__link js-navigation-primary_link" href="#ExperienceSection">Experience</a></li>
                         <li><a class="link navigation-primary__link js-navigation-primary_link" href="#ContactSection">Contact</a></li>
                         <li><a class="link navigation-primary__link js-navigation-primary_link" href="">Axe Throwing Guide</a></li>
-                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="#WaiverSection">Waiver</a></li>
+                        <li><a class="link navigation-primary__link js-navigation-primary_link" href="pages/waiver.html">Waiver</a></li>
                         <li><a class="link navigation-primary__link js-navigation-primary_link" href="#FaqsSection">FAQS</a></li>
                     </ul>
                 </div>
@@ -71,7 +64,7 @@
         </header>
         <main>
 
-            <section id="IntroSection" class="intro-section">
+            <section id="IntroSection" class="intro-section page-top-spacing">
                 <h1 class="intro-title">Ana's<br>Axe<br>Throwing</h1>
                 <div class="section-content__wrapper flexed-column">
                     <p class="intro-sub-title">Bury the hatchet<br>in some thick wood</p>
@@ -82,7 +75,7 @@
                 </div>
             </section>
 
-            <section id="AboutSection" class="about-section">
+            <section id="AboutSection" name="AboutSection" class="about-section">
                 <h2 class="page-section__title">About</h2>
                 <div class="section-content__wrapper">
                     <section class="about-section__content">
@@ -204,43 +197,7 @@
                 </div>
             </section>
 
-            <section id="WaiverSection" class="waiver-section">
-                <h2 class="page-section__title">Waiver</h2>
-                <div class="section-content__wrapper">
-                    <section class="waiver">
-                        <h3>*Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint consectetur dolor dolore facilis quia ratione at autem eum. Laboriosam, optio magni. Consequatur quo facere inventore at totam officiis aliquid! Libero.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolore, pariatur iusto sunt aliquam id fugit consectetur nisi aspernatur amet hic voluptas optio possimus enim porro provident error. Sequi, laudantium assumenda quia illo incidunt tempore at blanditiis cupiditate iste ullam perferendis possimus accusantium quam ipsam nesciunt dolores iusto dolore quisquam culpa aliquid deserunt cumque odit enim? Tempore voluptatem aliquam ipsum tenetur mollitia enim vel quidem adipisci! Harum, provident sunt? Quod sunt cum distinctio nobis quam dolores eos facere, deleniti sed harum amet voluptates esse debitis, sapiente impedit illo neque? Dignissimos expedita obcaecati, reprehenderit impedit necessitatibus deleniti amet? Perferendis, minus eos.</p>
-                    </section>
-                    <form action="" id="WaiverForm" class="waiver-form">
-                        <!--    Used this tuturial https://www.youtube.com/watch?v=Yg6POD0M30w -->
-                        <!-- Use FormSubmit.com -->
-
-                        <!-- Honeypot -->
-                        <input type="text" name="_honey" style="display: none;">
-                        <!-- Disable Captcha -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- Adding a succes page to override default from Formsubmit
-                            -create a success.html file
-                                -the value will the the full url of the html file, not the path to the file.
-
-                                -ex: value="https://altycon.github.io/AnasAxeThrowing/success.html"
-                        -->
-                        <input type="hidden" name="_next" value="">
-
-                        <section class="waiver-form__inputs-wrapper">
-                            <div class="waiver-form__canvas-container">
-                                <label for="WaiverFrom_SignatureCanvas">Sign</label>
-                                <canvas id="WaiverFrom_SignatureCanvas"></canvas>
-                            </div>
-                            <div class="waiver-form__input-container">
-                                <label for="WaiverFrom_DigitalSignature">Digitally Sign</label>
-                                <input type="text" name="digital-signature" id="WaiverFrom_DigitalSignature" autocomplete="off">
-                            </div>
-                        </section>
-                        <button type="button" id="WaiverFormSubmitButton" class="button waiver-form__submit-button">Sign Waiver</button>
-                    </form>
-                </div>
-            </section>
+            
 
             <section id="FaqsSection" class="faqs-section">
                 <h2 class="page-section__title">FAQS</h2>
